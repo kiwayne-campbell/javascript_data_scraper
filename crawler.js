@@ -2,7 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var URL =     require('url-parse');
 
-var pageToVisit = "http://nerds.airbnb.com/our-javascript-style-guide/";
+var pageToVisit = "http://www.nationalrail.com";
 // var pageToVisit = "http://www.arstechnica.com";
 console.log ("Visiting page " + pageToVisit );
 
@@ -19,10 +19,12 @@ request(pageToVisit, function(error, response, body){
         console.log("Page title: " + $('title').text());
         // console.log("Page title: " + $('p').text());
         // console.log("Page title: " + $('li').text());
+        collectInternalLinks($)
     }
 });
 
 function searchForWord ($, word) {
+    word = 'rail'
     var bodyText = $('html > body').text();
     if (bodyText.toLowerCase().indexOf(word.toLowerCase()) !== -1 ) {
         return true;
