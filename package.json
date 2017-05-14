@@ -1,0 +1,11 @@
+{
+    "name": "javascript-webcrawler",
+    "version": "0.0.1",
+    "description": "webcralwing with javascript",
+    "main": "crawler,js",
+    "dependencies": {
+        "cheerio": "^0.19.0",
+        "url-parse":"^1.0.5",
+        "request": "^2.65.0"
+    }
+}
